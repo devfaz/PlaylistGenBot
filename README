@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#
+# cat env.file
+# TOKEN=<TelegramApiToken>
+#
+
 docker build -t playlistgenbot .
 docker run -it -v /srv/playlistgenbot/tmp:/tmp/ --env-file=env.file -d --name botrun playlistgenbotrun
 
