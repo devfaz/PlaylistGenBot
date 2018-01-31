@@ -6,6 +6,6 @@
 #
 
 docker build -t playlistgenbot .
-docker run -it -v /srv/playlistgenbot/tmp:/tmp/ --env-file=env.file -d --name botrun playlistgenbotrun
+docker run -it -v /srv/playlistgenbot/tmp:/tmp/ --env-file=env.file -d --name botrun playlistgenbot
 
 
