@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# cat > Dockerfile.ENV << EOF
-# FROM playlistgenbot
-# ENV TOKEN="<TeleGramAPI-Token>"
-#
-
 docker build -t playlistgenbot .
-docker build -t playlistgenbotrun -f Dockerfile.ENV .
-docker run -it --user root -v /srv/playlistgenbot/tmp:/tmp/ -d --name botrun playlistgenbotrun
+docker run -it -v /srv/playlistgenbot/tmp:/tmp/ --env-file=env.file -d --name botrun playlistgenbotrun
 
 

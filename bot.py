@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import os
-import tempfile
 from os import unlink
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
